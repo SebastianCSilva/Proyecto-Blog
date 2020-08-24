@@ -3,15 +3,20 @@
         <title>Xohayo's Blog</title>
     </head>
     <body>
-        <div>
+        <div style="background-color:white;">
             <h1><a href="/">Blog</a></h1>
         </div>
-
+        {% for post in posts %}
         <div style="background-color: cornsilk;">
-            <p>Hola</p>
+            
+            <p>Publicado: {{ post.published_date}}</p>
+            <h2><a href="">{{ post.titulo }}</a></h2>
+            <p>{{ post.articulo | linebreaksbr }}</p>
+            
         </div>
-        
-        <div name="piepagina" style="background-color:darkgrey">
+        {% endfor %}
+
+        <div name="piepagina" style="background-color:lightgrey">
         <a href="https://instagram.com/basansetti">IG</a>
         <a href="https://twitch.tv/xohy">Twitch</a>
         </div>
